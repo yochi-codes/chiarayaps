@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Guestbook</title>
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Charm|Hurricane|Gveret Levin|Danfo">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        h1, th {
+            display: flex;
+            justify-content: center;
+            font-family: Charm, "Brush Script MT";
+        }
+        p, label {
+            font-family: "Gveret Levin";
+        }
+        td, input {
+            font-family: Hurricane, "Brush Script MT";
+        }
+        input {
+            width: 100%;
+        }
+        #submitbutton {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <a href = "index.html"><h6>Home</h6></a>
+    <h1>Chiara's Digital Guestbook</h1>
+    <table border = 1 width = 100%>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>Chiara <3</td>
+            <td>Sep. 29, 2026</td>
+        </tr>
+        <tr>
+            <td>Mama</td>
+            <td>Sep. 29, 2026</td>
+        </tr>
+        <tr>
+            <td>Adrian</td>
+            <td>Sep. 29, 2026</td>
+        </tr>
+        <tr>
+            <td>Levi the better sibling.</td>
+            <td>Sep. 29, 2026</td>
+        </tr>
+        <tr>
+            <td>Adriana the bestest sibling!!!</td>
+            <td>Sep. 30, 2026</td>
+        </tr>
+        <tr>
+            <td>Landon</td>
+            <td>Oct. 1, 2026</td>
+        </tr>
+        <tr>
+            <td>Isaac C</td>
+            <td>Oct. 4, 2026</td>
+        </tr>
+        <tr>
+            <td>Uncle Nicholas (greatest achievement = having Chiara as a niece!)</td>
+            <td>Oct. 23, 2026</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <h3>Add <em>your</em> name to the guestbook!</h3>
+    <form action="https://formspree.io/f/xvkglbpy" method="POST">
+        <label for = "name">Enter your name, or whatever you would like written in the book:</label>
+        <br>
+        <input type = "text" id = "name" name = "name"></input>
+        <br>
+        <br>
+        <input type = "submit" id = "submitbutton">
+    </form>
+</body>
+</html>

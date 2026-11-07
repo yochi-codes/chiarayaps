@@ -1,0 +1,99 @@
+body {
+    background-color: #09092a;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+
+@keyframes chameleon {
+    from {color: #009933;}
+    to {color: #99ff99;}
+}
+h1{
+    font-size: 100px;
+    animation: chameleon 5s infinite alternate;
+}
+
+
+h4, p, a {
+    font-size: 40px;
+    color: Lime;
+}
+h1, h4, a {
+    font-family: "Seaweed Script";
+    text-align: center;
+}
+p {
+    font-family: "Single Day";
+    text-align: justify;
+    text-align-last: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(50 205 50 / 0.2);
+}
+img {
+    width: 40%;
+    margin: 10px 30% 10px 30%;
+}
+
+
+.choice_container {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+}
+.choice_container a {
+    text-decoration: none;
+    width: 30%;
+    margin: 40px auto 0px auto;
+    transition: margin 1s;
+}
+.choice_container a:hover {
+    margin: 0px auto 40px auto;
+}
+.choice_container a img {
+    border-radius: 20px;
+    width: 100%;
+    margin: 0px;
+    border: 8px solid;
+    border-left-color: Lime;
+    border-top-color: Lime;
+    border-right-color: Green;
+    border-bottom-color: Green;
+}
+
+footer {
+    display: flex;
+    margin: 20px 20% 20px 20%;
+    width: 60%;
+}
+footer a {
+    display: block;
+    border-radius: 20px;
+    width: 40%;
+    margin: 10px 5% 10px 5%;
+    padding: 20px;
+    color: DarkGreen;
+    background-color: LimeGreen;
+    border: 8px solid;
+    border-left-color: Lime;
+    border-top-color: Lime;
+    border-right-color: Green;
+    border-bottom-color: Green;
+}
+footer a:hover {
+    background-color: #70dc70;
+}
+footer a:active {
+    background-color: #28a428;
+}
+
+
+@keyframes sadjimothy {
+    from {filter: grayscale(0%);}
+    to {filter: grayscale(100%);}
+}
+.sadjimothy {
+    filter: grayscale(100%);
+    animation: sadjimothy 3s;
+}

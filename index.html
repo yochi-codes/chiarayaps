@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chiara's Amazing Website</title>
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Stylish|Story Script&effect=neon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        h1, h2, h3 {
+            font-family: "Trebuchet MS";
+            color: RebeccaPurple;
+        }
+        h4, h5, h6, p {
+            font-family: "Stylish";
+            color: RebeccaPurple;
+        }
+        a {
+            font-family: "Stylish";
+            color: MediumSlateBlue;
+        }
+        ul {
+            font-family: "Stylish";
+            color: RebeccaPurple;
+            font-style: italic;
+        }
+        .underconstruction, .underconstruction a {
+            color: Crimson;
+            font-style: italic;
+        }
+        #old {
+            background-color: white;
+        }
+        #old h1 {
+            color: Black;
+            font-family: "Times New Roman";
+            font-size: 32px;
+        }
+        #old :is(p, a) {
+            font-family: "Times New Roman";
+            font-size: 16px;
+        }
+        #old p {
+            color: Black;
+        }
+        #old a {
+            color: Blue;
+            text-decoration: underline;
+        }
+        #interest, #interest a {
+            color: HotPink;
+            font-family: "Story Script", cursive;
+        }
+        body {
+            background-image: url(https://codehs.com/uploads/3a9735662955f2bdae07fda014837ee7);
+            background-repeat: repeat;
+        }
+        header {
+            display: flex; 
+            gap: 4%; 
+            align-items: center;
+        }
+        header h1{
+            width: 58%; 
+            display: inline-block;
+        }
+        header img {
+            width: 40%;
+            border-radius: 30%;
+        }
+        section {
+            display: flex;
+            gap: 4%; 
+            align-items: start;
+        }
+        section :is(nav, p) {
+            width: 48%;
+        }
+        #secret:hover::after {
+            content:"  Except for this :)";
+        }
+        :is(a, #interest):hover {
+            font-style: bold;
+            color: MediumPurple;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 >Welcome to my website!</h1>
+        <img src = "https://codehs.com/uploads/152be0435e446f1208df4acef585352b">
+    </header>
+    <section>
+        <nav>
+            <h3>Pages</h3>
+            <ul>
+                <li>
+                    <a href = "myfavecharacters.html">My Favorite Marvel Characters</a>
+                </li>
+                <li>
+                    <a href = "toronto.html">Visiting Toronto</a>
+                </li>
+                <li>
+                    <a href = "devlog.html">My Developer's Log</a>
+                </li>
+                <li id = "interest">
+                    <a href = "guestbook.html">Sign my digital guestbook!</a>
+                </li>
+                <li>
+                    <a href = "tomato.html">Eat The Tomato</a>
+                </li>
+                <li>
+                    <a href = "yelena.html">Yelena Belova</a>
+                </li>
+            </ul>
+            <h3>Articles</h3>
+            <ul>
+                <li>
+                    <a href = "pinkfairyarmadillo.html">The Pink Fairy Armadillo</a>
+                </li>
+                <li>
+                    <a href = "cactusgraft.html">All About Cactus Grafting!</a>
+                </li>
+            </ul>
+            <h3>Games</h3>
+            <ul>
+                <li>
+                    <a href = "TheInterview/i.html">The Interview</a>
+                    <ul>
+                        Will you be the right candidate for a dubious company?
+                    </ul>
+                </li>
+                <li>
+                    <a href = "JimothyIsLost/j.html">Jimothy Is Lost</a>
+                    <ul>
+                        Help Jimothy survive space and find his family!
+                    </ul>
+                </li>
+            </ul>
+            <h5 class = "underconstruction">*Page is under construction.</h5>
+        </nav>
+        <p>
+            My name is Chiara and this is my website!
+            I like programming, games, Marvel, and many other things that you may see on this website.
+            I'm constantly trying to improve my website, always learning new things as I go.
+            Here, you'll see some very basic pages I made from when I just started learning HTML, to more advanced pages that better reflect my current HTML and CSS knowledge :).
+            I like to makes little pages about whatever I feel like in the moment, and choose-your-own-adventure games. 
+            Feel free to explore my content!
+            <br>
+            <br>
+            Page Count: 48
+            <br>
+            Line Count: 2192
+        </p>
+    </section>
+    <hr>
+    <p>
+        Obviously, constantly trying to find ways to improve is a big part of developing anything, really.
+        This website is clearly nothing special, and definitely quite a few years behind its time right now.
+        But, I think it's important to remember where you started, and the sentimental part of me didn't want to delete this;
+        so, here is my original home page in its entirety:
+    </p>
+    <div id = "old">
+        <h1> Hello! </h1>
+        <p>
+            My name is Chiara and this is my website.
+            I don't know what it's about yet, I'm just making pages about anything I feel like at the moment.
+            Feel free to check 'em out!
+        </p>
+        <a>My Favorite Marvel Characters</a> <br>
+        <a>Visiting Toronto</a> <br>
+        <p>
+            Or, try out my new CYOA game!
+        </p>
+        <a>The Interview</a> <br>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <p id = "secret">
+        Wow! You made it to the end. Congratulations. I'm flattered. Nothing to see here.
+    </p>
+</body>
+</html>

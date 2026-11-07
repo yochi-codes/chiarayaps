@@ -1,0 +1,45 @@
+.hired h1 {
+    background-color: Aqua;
+}
+.hired h3 {
+    color: DarkTurquoise;
+}
+#m1 {
+    background-color: Red;
+}
+#m2 {
+    background-color: #ff9933;
+}
+#m3 {
+    background-color: #ffcc00;
+}
+#l4 {
+    background-color: #ffff00;
+}
+#l3 {
+    background-color: #ccff33;
+}
+#l2 {
+    background-color: #99ff33;
+}
+#l1 {
+    background-color: #66ff33;
+}
+.nothired h1{
+    background-color: LightGreen;
+}
+.nothired h3 {
+    color: ForestGreen;
+}
+.eaten h1{
+    background-color: Red;
+}
+.eaten h3 {
+    color: Maroon;
+}
+.special h1{
+    background-color: Violet;
+}
+.special h3 {
+    color: Magenta;
+}

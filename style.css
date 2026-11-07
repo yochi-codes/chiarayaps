@@ -1,0 +1,17 @@
+h1 {font-size: 120px;}
+h2 {font-size: 100px;}
+h3 {font-size: 80px;}
+h4 {font-size: 60px;}
+h5 {font-size: 40px;}
+h6 {font-size: 20px;}
+p {font-size: 60px;}
+a {font-size: 60px;}
+ol {font-size: 50px;}
+ul {font-size: 40px;}
+td {font-size: 40px;}
+label {font-size: 40px;}
+input {font-size: 60px;}
+.ytvid {aspect-ratio: 16 / 9}
+* {
+    box-sizing: border-box;
+}
