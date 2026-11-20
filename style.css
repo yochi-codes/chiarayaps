@@ -353,7 +353,7 @@ figcaption {
 
 figure.merch img {
     aspect-ratio: 1 / 1;
-    object-cover: contain;
+    object-fit: contain;
 }
 
 
