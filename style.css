@@ -1,17 +1,495 @@
-h1 {font-size: 120px;}
-h2 {font-size: 100px;}
-h3 {font-size: 80px;}
-h4 {font-size: 60px;}
-h5 {font-size: 40px;}
-h6 {font-size: 20px;}
-p {font-size: 60px;}
-a {font-size: 60px;}
-ol {font-size: 50px;}
-ul {font-size: 40px;}
-td {font-size: 40px;}
-label {font-size: 40px;}
-input {font-size: 60px;}
-.ytvid {aspect-ratio: 16 / 9}
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Story+Script&family=Stylish&family=Knewave&family=Chango&family=Betania+Patmos&display=swap');
+
 * {
     box-sizing: border-box;
 }
+.container-fluid {
+    max-width: 1400px;
+}
+
+/*FONT SIZES*/
+h1 {
+    font-family: "Chango";
+    color: #9A3BFF; /*Electric Orchid*/
+}
+h2 {
+    font-family: "Coiny";
+    color: #D28CFF; /*Plush Lilac*/
+    text-align: center;
+    margin: 30px;
+}
+h2.top {
+    margin-top: 0px;
+}
+h3 {
+    font-family: "Coiny";
+    color: #A06CD5; /*Bright Azure*/
+    text-align: center;
+}
+
+p, input, a, ol, ul, td, label, figcaption {
+    font-family: "Stylish";
+    color: #7D3C98; /*Vibrant Medium VIolet*/
+}
+th {
+    font-family: "Coiny";
+    text-align: center;
+    color: #D28CFF;
+}
+
+a {
+    color: #009BFF; /*Hyper Cyan*/
+}
+
+/*SEMANTICS*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 50vw;
+    max-height: 500px;
+    justify-content: left;
+    background-image: 
+        url("https://codehs.com/uploads/ebc1eb13803d0b33c6371801a15236b9"), /* main image */
+        url("https://codehs.com/uploads/930ad9d6fc7d201c642ac7ab45c2955b"); /* repeating image */
+        
+    background-repeat: 
+        no-repeat,
+        repeat-x;
+
+    background-size: 
+        contain,
+        auto;
+
+    background-position: 
+        right center,
+        right center;
+        
+    align-content: center;
+}
+header.secondary {
+    height: 37.5vw;
+    max-height: 375px;
+    background-image: 
+        url("https://codehs.com/uploads/eab62214099b1146eb00733d9a174d98"), /* main image */
+        url("https://codehs.com/uploads/eab62214099b1146eb00733d9a174d98");
+    background-size: 
+        contain,
+        contain;
+}
+header .container-fluid {
+    height: 100%;
+}
+header .row {
+    height: 100%;
+}
+header .header-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;      /* stack h1 and h2 */
+    justify-content: center;     /* center vertically */
+    align-items: flex-start;     /* align left horizontally */
+}
+header h1 {
+    text-shadow: 2px 2px 4px #E8F5E9;
+}
+header :is(h1, h2) {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+}
+header h2 {
+    margin-top: 5px;
+}
+@media (max-width: 767.98px) {
+    header .header-text {
+        justify-content: flex-start;     /* center vertically */
+    }
+    header h2 {
+        margin-top: 0px;
+    }
+}
+
+main {
+    flex: 1;
+    background: linear-gradient(
+        to bottom,
+        #98FB98 0%,   /* #B57EDC Soft Radiant Violet — medium pastel lavender */
+        #8EECF5 100%  /* Crystal Blue — medium pastel blue */
+    );
+    padding: 30px;
+}
+
+footer {
+    background-color: #8EECF5; /*Lavender White — soft & clean*/
+    padding: 20px;
+    text-align: center;
+}
+footer * {
+    margin: 0px;
+    color: #7D3C98;
+}
+
+
+/*NAVBAR*/
+
+.navbar {
+    background-color: #E8F5E9; /* Mint Whisper */
+    border-bottom: 2px solid #C1E1C1; /* Pale Celadon */
+}
+.navbar li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.navbar-brand {
+    color: #7c30ce !important; /* Logo Text */
+    font-weight: bold;
+}
+.navbar-brand:hover {
+    color: #6326a5 !important; /* Logo Hover */
+}
+
+.nav-link, .link {
+    color: #7c30ce !important;
+}
+:is(.nav-link, .link):hover {
+    color: #6326a5 !important;
+}
+.nav-link.active{
+    color: #D883FF !important;
+}
+
+.dropdown-menu {
+    background-color: #D0E1D4 !important; /* Soft Sage */
+    border: 2px solid #C1E1C1 !important;
+    border-radius: 10px;
+}
+
+.dropdown-item {
+    color: #7c30ce !important;
+}
+.dropdown-item:hover {
+    background-color: #C1E1C1 !important; /* Pale Celadon */
+    color: #6326a5 !important;
+}
+.dropdown-item.active {
+    background-color: transparent !important;
+    color: #D883FF !important;
+}
+
+.dropdown-divider {
+    border-top: 2px solid #C1E1C1 !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+}
+
+.navbar-toggler i {
+    font-size: 1.5rem;
+    color: #7c30ce;
+}
+
+/* Caret direction: closed = down */
+.navbar-toggler.collapsed i {
+    transform: rotate(0deg);
+}
+
+/* Caret direction: open = up */
+.navbar-toggler:not(.collapsed) i {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 767.98px) {
+
+    /* Make dropdown width only as wide as its longest item */
+    .navbar-collapse .dropdown-menu {
+        position: absolute !important;
+        left: 0;
+        right: auto;
+        width: max-content !important;
+        min-width: max-content !important;
+        background-color: #D0E1D4 !important;
+        border: 2px solid #C1E1C1 !important;
+        border-radius: 10px;
+        box-shadow: none;
+        padding-left: 0.5rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Keep dropdown aligned under its button */
+    .navbar-nav .dropdown {
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav .dropdown-menu {
+        min-width: max-content !important;
+        width: auto !important;
+        left: 0 !important;
+        right: auto !important;
+    }
+}
+
+
+/*FRAMES*/
+.polaroid {
+    background-color: #FFFFFF;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Knewave";
+    color: #84DCC6;
+    text-align: center;
+}
+a.polaroid {
+    display: block;
+}
+a.polaroid:hover {
+    color: #64DFDF;
+}
+.polaroid h4 {
+    margin-top: 10px;
+}
+.polaroid :is(img, iframe) {
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+@media (min-width: 768px) {
+    .polaroid {
+        margin: 30px;
+    }
+    
+    .polaroid:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+.floating_image {
+    margin: 30px auto;
+    border-radius: 30px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+/*OLD SITE SNAPSHOT*/
+#old {
+    background-color: white;
+}
+#old h1 {
+    color: Black;
+    font-family: "Times New Roman";
+    font-size: 32px;
+}
+#old :is(p, a) {
+    font-family: "Times New Roman";
+    font-size: 16px;
+}
+#old p {
+    color: Black;
+}
+#old a {
+    color: Blue;
+    text-decoration: underline;
+}
+
+
+
+.large-iframe {
+    width: 80%;
+    margin: 30px 10%;
+    height: clamp(100px, 30vw, 1000px);
+    border-radius: 30px;
+}
+@media (max-width: 767.98px) {
+    .large-iframe {
+        width: 98%;
+        margin: 30px 1%;
+        height: clamp(100px, 80vw, 1000px);
+        border-radius: 30px;
+    }
+}
+
+
+.icon-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* spacing between icons */
+}
+.icon-group i {
+    font-size: 2rem;
+    color: #7D3C98;
+}
+
+
+figure {
+    padding: 20px;
+}
+figure img {
+    width: 100%;
+}
+figcaption {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #E0Aaff;
+    border-radius: 20px;
+}
+
+figure.merch img {
+    aspect-ratio: 1 / 1;
+    object-cover: contain;
+}
+
+
+#sneakpeak:active::after {
+    content: " Well, too bad, you don't get one ;).";
+}
+
+
+div.gap-80 {
+    height: 80px;
+}
+@media (min-width: 768px) {
+    div.gap-md-80 {
+        height: 80px;
+    }
+}
+
+
+table#guestbook {
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    table#guestbook {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+table#guestbook tr {
+    border-bottom: 2px dashed #7D3C98;
+}
+table#guestbook td {
+    font-family: "Betania Patmos";
+    padding: 20px 6px 4px 6px;
+}
+table#guestbook td:nth-child(2) {
+    text-align: center;
+}
+
+
+.date {
+    color:#A06CD5;
+}
+
+
+
+/*
+#9A3BFF - Logo Color
+#7c30ce - Logo Text
+#6326a5 - Logo Hover
+
+#572190 - Text Color
+
+*/
+
+/*
+#E6E6FA - Lavender Mist
+#E8DFF5 - Pale Thistle
+#D8B4E2 - Muted Lilac
+#C3AED6 - Dusty Heather
+#DCD6F7 - Orchid Mist
+#B5A8D5 - Soft Periwinkle-Purple
+
+#E8F5E9 - Mint Whisper
+#D0E1D4 - Soft Sage
+#C1E1C1 - Pale Celadon
+#D4E09B - Pistachio Cream
+#B2D8D8 - Frosted Mint
+#A3C9A8 - Muted Eucalyptus
+
+#F0F8FF - Ice Blue
+#E0F7FA - Soft Sky
+#D4F1F4 - Baby Powder Blue
+#B0E0E6 - Powder Blue
+#A8DADC - Dusty Robin Egg
+#9EA1D4 - Muted Cloud Blue
+
+#D4E7C5 - Seafoam Lavender (Transition Tone)
+#B4E1D7 - Pastel Aquamarine (Transition Tone)
+#C5D3E8 - Soft Hydrangea (Transition Tone)
+#B8C0E0 - Periwinkle Dust (Transition Tone)
+*/
+
+/*
+#F3C4FB - Bright Lilac Bloom
+#DDA0DD - Radiant Thistle
+#C77DFF - Electric Lavender
+#B388EB - Soft Neon Orchid
+#A06CD5 - Vivid Wisteria
+
+#98FB98 - Bright Mint Green
+#70E4C8 - Soft Neon Turquoise
+#A8E6CF - Fresh Pistachio
+#B9FBC0 - Bright Dewberry Green
+
+#84DCC6 - Luminous Seafoam
+#80E5FF - Vibrant Sky Cyan
+#A0C4FF - Bright Powder Blue
+#9BF6FF - Electric Ice Blue
+#72EFDD - Bright Aqua Mist
+#8EECF5 - Soft Neon Azure
+
+#FFC6FF - Vibrant Bubblegum Pastel
+#CAFFBF - Luminous Lime Cream
+#FDFFB6 - Bright Lemon Chiffon
+*/
+
+/*
+#E0Aaff - Vibrant Lavender Softness
+#C77DFF - Bright Violet Dew
+#B57EDC - Soft Orchid Glow
+#D883FF - Fresh Lilac Spark
+#A594F9 - Luminous Periwinkle
+
+#64DFDF - Fresh Turquoise Mist
+#72EFDD - Vibrant Mint Aqua
+#80ED99 - Soft Bright Emerald
+#90E0EF - Clear Seafoam Blue
+#B5E2FA - Bright Celestial Green
+
+#70D6FF - Vibrant Sky Cyan
+#90E0EF - Soft Electric Breeze
+#A0C4FF - Bright Hydrangea Blue
+#8ECAE6 - Soft Cerulean Mist
+#B8C0FF - Radiant Cloud Blue
+
+#FFB703 - Soft Warm Sunrise (Accent)
+#FF9EBB - Gentle Bubblegum Blush (Accent)
+*/
+
+/*
+#663399 Rebecca Purple (Original)
+#5B2C6F Deep Amethyst Spark
+#6B2D5C Rich Plum Bloom
+#7D3C98 Vibrant Medium Violet
+#6C3483 Regal Orchid Tone
+*/

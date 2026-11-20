@@ -1,0 +1,6 @@
+h1 { font-size: clamp(3.25rem, 6.5vw, 6.5rem); }
+h2 { font-size: clamp(2.75rem, 5.5vw, 5.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 3rem); }
+h4, th, .date { font-size: clamp(1rem, 2vw, 2rem); }
+
+p, input, a, figcaption, td, ol, ul, label { font-size: clamp(1rem, 1.5vw, 1.5rem); }
